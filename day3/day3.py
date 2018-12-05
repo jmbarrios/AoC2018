@@ -21,14 +21,12 @@ def solution1(input_file):
     squares = defaultdict(list)
     for claim in data:
         for i in range(claim['h'],
-                claim['h']+claim['dx']):
+                       claim['h']+claim['dx']):
             for j in range(claim['v'],
-                    claim['v']+claim['dy']):
+                           claim['v']+claim['dy']):
                     squares[(i, j)].append(claim['id'])
 
-    intersected = [1 for k, v in squares.items() if len(v)>1]
-
-    return sum([1 for k, v in squares.items() if len(v)>1])
+    return sum([1 for k, v in squares.items() if len(v) > 1])
 
 
 def solution2(input_file):
@@ -42,9 +40,9 @@ def solution2(input_file):
     squares = defaultdict(list)
     for claim in data:
         for i in range(claim['h'],
-                claim['h']+claim['dx']):
+                       claim['h']+claim['dx']):
             for j in range(claim['v'],
-                    claim['v']+claim['dy']):
+                           claim['v']+claim['dy']):
                     squares[(i, j)].append(claim['id'])
 
     unique_claims = set(claim['id'] for claim in data)
