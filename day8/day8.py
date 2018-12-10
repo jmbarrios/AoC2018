@@ -1,5 +1,4 @@
 import sys
-import re
 
 
 def parse_data(data):
